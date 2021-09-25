@@ -1,0 +1,38 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-lightblue: #0369A1;
+  --color-blue: #0EA5E9;  
+  --color-babyblue: #99ccff;
+  --color-whiteblue: #c2e9fb;
+  --color-sunglow : #f8de7e;
+  --color-palepink : #ffb7c5;
+  --color-purple : #b19cd9;
+  --color-red : #da8a67;
+  --color-green : #229954;
+  --color-babygreen : #A9DFBF;
+  --color-darkred : #C0392B;
+  --color-babyred : #e47d5e;
+  --color-bluesea :  #8DC6BF;
+  --color-egg : #8dc6bf80;
+  /* ... */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
