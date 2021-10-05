@@ -37,6 +37,8 @@ module.exports = {
       'babyred' : '#F5B7B1',
       'bluesea' : '#8DC6BF',
       'egg' : '#8dc6bf80',
+      'white' : ' #FFFFFF',
+      'redcony' : '#FDD6AB',
      }),
     extend: {
       

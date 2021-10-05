@@ -82,10 +82,7 @@ export default function Login({ token }) {
                 </div>
                 {/* <button onClick={copyText}> Copy token </button> */}
 
-                <button onClick={copyText} className='flex justify-end items-center w-full mt-8 focus:outline-none'>
-                    <img className='mr-16 transition duration-700 transform hover:-translate-y-1 hover:scale-110' src="/top-secret.svg" />
-                </button>
-
+             
             </div>
         </Layout>
     )

@@ -1,8 +1,10 @@
 import Link from 'next/link'
+
+
 const Navbar = () => (
-    <nav className='flex items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
+    <nav className='grid grid-cols-3 divide-x-2 divide-white items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
         <Link href='/'>
-            <a className='flex flex-col items-center divide-y-2 divide-white ml-4'>
+            <a className='flex flex-col items-center divide-y-2 divide-white'>
                 <span className='text-xl text-white font-bold uppercase tracking-wide pb-1 text-center'>
                     NFT game tutorials
                 </span>
@@ -11,30 +13,48 @@ const Navbar = () => (
                 </span>
             </a>
         </Link>
-        <div className='hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'>
-            <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto'>
+
+        <div className='flex justify-center w-full lg:inline-flex lg:flex-grow lg:w-auto'>
+            <div className='lg:inline-flex lg:flex-row lg:w-auto w-full lg:items-center items-center flex flex-col justify-center lg:h-auto'>
                 <Link href='/'>
-                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-4 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 ml-8 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
                         HOME
-                     </a>
-                </Link>
-                <Link href='/#'>
-                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-4 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                        MENU
                     </a>
                 </Link>
-                <Link href='/#'>
-                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-4 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                        CONTECT US
+                <Link href='/subject'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                        SUBJECT
                     </a>
                 </Link>
-                <Link href='/#'>
-                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-4 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                <Link href='/testsubject'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                        TEST
+                    </a>
+                </Link>
+                <Link href='/items'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                        ITEMS
+                    </a>
+                </Link>
+                {/* <Link href='/#'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
                         LOG OUT
                     </a>
-                </Link>
+                </Link> */}
             </div>
         </div>
+
+        <div className='hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'>
+            <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto'>
+                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                    USER
+                </a>
+                
+
+
+            </div>
+        </div>
+
     </nav>
 )
 
