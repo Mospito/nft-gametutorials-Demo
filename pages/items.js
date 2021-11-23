@@ -15,7 +15,7 @@ export default function Subject({ token }) {
             <div className='flex flex-col justify-center w-full h-full items-center'>
                 <div className='flex flex-row justify-center w-full items-center'>
                     <div className='flex flex-col justify-start items-center text-4xl w-1/3 p-4 mr-6 font-bold  tracking-wider shadow-xl bg-redcony rounded-lg'>
-                        <a classname='uppercase'>NFT game tutorials</a>
+                        <a className='uppercase'>NFT game tutorials</a>
                         <a className='flex justify-center mt-4 text-2xl font-bold animate-pulse'>" Items ของคุณ "</a>
                     </div>
                     <div className='-ml-20'>

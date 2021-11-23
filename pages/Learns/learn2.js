@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 export default function Learn({ token }) {
 
@@ -13,7 +13,7 @@ export default function Learn({ token }) {
             <div className='md:flex flex-col fixed -mt-10 justify-center items-center h-screen w-screen'>
                 <div className='flex flex-col w-4/5 h-3/4 p-4 border-4 border-yellow-700 bg-sunglow rounded-3xl shadow-xl'>
                     <div className='flex flex-col w-full h-full'>
-                    <iframe width="1020" height="500" src="https://www.youtube.com/embed/I4ysG5kcw9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="1020" height="500" src="https://www.youtube.com/embed/sHxx815BIEs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         {/* <h1 className='text-2xl text-center font-semibold '>ความเป็นมาของ Solidity</h1> <br />
                         <h2>solidity เป็นภาษาสำหรับการสร้าง Smart Contract
                             เป็นภาษาที่ได้รับอิทธิพลมาจาก C ++, Python
@@ -40,7 +40,7 @@ export default function Learn({ token }) {
                         </li> */}
                     </div>
                     <div className='flex justify-end items-end'>
-                        <Link href='starttest'>
+                        <Link href='/../starttest'>
                             <a className='flex justify-center items-center w-36 h-14 bg-redcony
                                 text-2xl text-center font-semibold border-4 border-red-400 rounded-lg
                                 hover:bg-sunglow focus:outline-none'>Next</a>

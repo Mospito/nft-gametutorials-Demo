@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 
 export default function Learn({ token }) {
 
@@ -40,7 +40,7 @@ export default function Learn({ token }) {
                         </li> */}
                     </div>
                     <div className='flex justify-end items-end'>
-                        <Link href='starttest'>
+                        <Link href='/../starttest'>
                             <a className='flex justify-center items-center w-36 h-14 bg-redcony
                                 text-2xl text-center font-semibold border-4 border-red-400 rounded-lg
                                 hover:bg-sunglow focus:outline-none'>Next</a>

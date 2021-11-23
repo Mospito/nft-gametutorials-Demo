@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 import Image from 'next/image'
-import solidityPhoto from '../photos/Solidity_logo.svg'
-import conyPhoto from '../photos/cony.png'
+import solidityPhoto from '../../photos/Solidity_logo.svg'
+import conyPhoto from '../../photos/cony.png'
 
 export default function StartLearn({ token }) {
 
@@ -27,7 +27,7 @@ export default function StartLearn({ token }) {
                         บทที่ 1
                     </div>
                     <div className='flex w-full justify-center items-center mt-16'>
-                        <Link href='learn'>
+                        <Link href='Learns/learn1'>
                             <a className='flex justify-center items-center w-36 h-14 bg-redcony
                             text-2xl text-center font-semibold border-4 border-red-400 rounded-lg
                             hover:bg-sunglow focus:outline-none'>Start</a>

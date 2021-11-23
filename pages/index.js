@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Link from 'next/link'
 
 
+
 export default function Home({ token }) {
  
   return (
@@ -18,12 +19,12 @@ export default function Home({ token }) {
           <a className = 'animate-pulse mt-8'>Play & Learning</a>   
         </div>
           <div className = 'flex justify-around md:w-96 text-lg mt-8'>
-            <Link href = '/login'>
-              <button className = 'w-36 h-14 font-semibold border-blue-600 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Log in</button>
+            <Link href = '/connectwallet'>
+              <button className = 'w-36 h-14 font-semibold border-blue-600 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Connect Wallet</button>
             </Link>
-            <Link href = '/register'>
+            {/* <Link href = '/register'>
               <button className = 'w-36 h-14 font-semibold border-blue-600 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Register</button> 
-            </Link>
+            </Link> */}
           </div>  
       </div>
      
