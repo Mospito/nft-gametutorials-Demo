@@ -73,7 +73,7 @@ export default function Login({ token }) {
                             Log in
                         </button>
                         <div className='flex flex-row mt-6'>
-                            Don't have an account?
+                            Dont have an account?
                             <Link href='/register'>
                                 <a className='ml-2 font-semibold'>Register</a>
                             </Link>

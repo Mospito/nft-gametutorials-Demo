@@ -15,7 +15,7 @@ export default function Subject({ token }) {
             <div className='flex flex-row justify-center w-full items-center'>
                 <div className='flex flex-col justify-start items-center text-4xl w-2/5 p-4 mr-6 font-bold uppercase tracking-wider shadow-xl bg-redcony rounded-lg'>
                     <a>NFT game tutorials</a>
-                    <a className='flex justify-center mt-4 text-2xl font-bold  animate-pulse'>" เลือกวิชาเรียนที่สนใจได้เลยครับ "</a>
+                    <a className='flex justify-center mt-4 text-2xl font-bold  animate-pulse'>เลือกวิชาเรียนที่สนใจได้เลยครับ</a>
                 </div>
                 <div className='-ml-20'>
                     <Image src={conyPhoto} width="200%" height="200%" className=''/>

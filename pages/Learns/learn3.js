@@ -13,7 +13,7 @@ export default function Learn({ token }) {
             <div className='md:flex flex-col fixed -mt-10 justify-center items-center h-screen w-screen'>
                 <div className='flex flex-col w-4/5 h-3/4 p-4 border-4 border-yellow-700 bg-sunglow rounded-3xl shadow-xl'>
                     <div className='flex flex-col w-full h-full'>
-                    <iframe width="1020" height="500" src="https://www.youtube.com/embed/BF9_eZkEuUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="1020" height="500" src="https://www.youtube.com/embed/BF9_eZkEuUA" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
                         {/* <h1 className='text-2xl text-center font-semibold '>ความเป็นมาของ Solidity</h1> <br />
                         <h2>solidity เป็นภาษาสำหรับการสร้าง Smart Contract
                             เป็นภาษาที่ได้รับอิทธิพลมาจาก C ++, Python

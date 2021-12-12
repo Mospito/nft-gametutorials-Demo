@@ -16,10 +16,10 @@ export default function Subject({ token }) {
                 <div className='flex flex-row justify-center w-full items-center'>
                     <div className='flex flex-col justify-start items-center text-4xl w-1/3 p-4 mr-6 font-bold  tracking-wider shadow-xl bg-redcony rounded-lg'>
                         <a className='uppercase'>NFT game tutorials</a>
-                        <a className='flex justify-center mt-4 text-2xl font-bold animate-pulse'>" Items ของคุณ "</a>
+                        <a className='flex justify-center mt-4 text-2xl font-bold animate-pulse'> Items ของคุณ </a>
                     </div>
                     <div className='-ml-20'>
-                        <Image src={conyPhoto} width="200%" height="200%" className='' />
+                        <Image src={conyPhoto} width="200%" height="200%"  />
                     </div>
                 </div>
                 <div className='flex justify-start items-start overflow-y-auto w-3/4 h-96'>
@@ -34,7 +34,7 @@ export default function Subject({ token }) {
                     <tbody>
                         <tr className='text-center text-lg font-medium bg-white'>
                             <td className='border-4 border-red-400'>
-                                <Image src={swordPhoto} width="200%" height="200%" className='' />
+                                <Image src={swordPhoto} width="200%" height="200%"  />
                             </td>
                             <td className='border-4 border-red-400'>Sword</td>
                             <td className='border-4 border-red-400 text-left pl-12'>
