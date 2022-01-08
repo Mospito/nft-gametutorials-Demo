@@ -4,14 +4,17 @@ import Link from 'next/link'
 const Navbar = () => (
     <nav className='grid grid-cols-3 divide-x-2 divide-white items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
         <Link href='/'>
-            <a className='flex flex-col items-center divide-y-2 divide-white'>
-                <span className='text-xl text-white font-bold uppercase tracking-wide pb-1 text-center'>
-                    NFT game tutorials
-                </span>
-                <span className='text-sm text-white font-bold uppercase tracking-wide text-center pt-2'>
-                    Prince of Songkla University Phuket Campus
-                </span>
-            </a>
+            <div className='md:flex'>
+                <a className='flex flex-col items-center divide-y-2 divide-white'>
+                    <span className='text-xl text-white font-bold uppercase tracking-wide pb-1 text-center'>
+                        NFT game tutorials
+                    </span>
+                    <span className='text-sm text-white font-bold uppercase tracking-wide text-center pt-2'>
+                        Prince of Songkla University Phuket Campus
+                    </span>
+                </a>
+            </div>
+
         </Link>
 
         <div className='flex justify-center w-full lg:inline-flex lg:flex-grow lg:w-auto'>
@@ -49,7 +52,7 @@ const Navbar = () => (
                 <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
                     USER
                 </a>
-                
+
 
 
             </div>

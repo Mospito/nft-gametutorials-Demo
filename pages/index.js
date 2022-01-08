@@ -13,7 +13,7 @@ export default function Home({ token }) {
         <title>NFT game tutorials</title>
     </Head>
          
-      <div className = 'flex flex-col fixed justify-center items-center h-screen w-screen'>
+      <div className = 'flex flex-col fixed justify-center items-center h-screen w-screen '>
         <div className = 'flex flex-col -mt-28 font-bold tracking-widest uppercase text-5xl text-center p-8'>
           <a className = 'animate-pulse'>NFT game tutorials</a>
           <a className = 'animate-pulse mt-8'>Play & Learning</a>   
