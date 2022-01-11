@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+
 import Layout from '../components/layout'
 import React, { useState } from 'react';
 
@@ -91,8 +91,8 @@ export default function Test({ token }) {
                                         <div className='font-bold text-xl'>{questions[currentQuestion].questionText}</div>
                                     </div>
                                     <div className='grid grid-cols-2 gap-8 gap-y-12 mt-10 '>
-                                        {questions[currentQuestion].answerOptions.map((answerOption) => (
-                                            <button className='h-28 ring-yellow-500 ring-offset-yellow-400 ring-offset-4 ring-8 rounded-lg text-lg bg-redcony hover:bg-sunglow' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+                                        {questions[currentQuestion].answerOptions.map((answerOption,index) => (
+                                            <button key={index} className='h-28 ring-yellow-500 ring-offset-yellow-400 ring-offset-4 ring-8 rounded-lg text-lg bg-redcony hover:bg-sunglow' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
                                         ))}
                                     </div>
                                 </>
