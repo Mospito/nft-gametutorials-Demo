@@ -1,10 +1,29 @@
 import Head from 'next/head'
 
 import Layout from '../components/layout'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios'
 
+const URL = `http://178.128.90.50:4444/quizs`
 
 export default function Test({ token }) {
+
+
+    const [quizs, setQuizs] = useState([])
+    const [quiz, setQuiz] = useState({})
+
+    const quest = [{
+        "id": 1,
+        "question": "Which technologies does blockchain use?",
+        "choice1": "Peer-to-peer networking",
+        "choice2": "Asymmetric cryptography",
+        "choice3": "Cryptographic hashing",
+        "choice4": "All of the above",
+        "ans": "All of the above",
+        "created_at": "2022-01-17T09:54:01.000+07:00",
+        "updated_at": "2022-01-17T09:54:01.000+07:00"
+    }
+ ]
 
     const questions = [
         {
@@ -45,9 +64,13 @@ export default function Test({ token }) {
         },
     ];
 
+
+
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
+    let tmpCurr = 0;
 
     const handleAnswerOptionClick = (isCorrect) => {
         if (isCorrect) {
@@ -63,6 +86,43 @@ export default function Test({ token }) {
         }
     };
 
+    const EventAnswerOptionClick = (choiceEvent) => {
+        if (quest[currentQuestion].ans === choiceEvent ) {
+            setScore(score + 1);
+        }
+
+        const nextQuestion = currentQuestion + 1;
+        if (nextQuestion < quest.length) {
+            setCurrentQuestion(nextQuestion);
+        } else {
+            setShowScore(true);
+            // alert('Your scored is ' + score + 'out of' + quest.length)
+        }
+    };
+
+
+    useEffect(() => {
+        getQuizs()
+    }, [])
+
+
+    const getQuizs = async () => {
+
+        let quiz = await axios.get(URL)
+        console.log(quiz);
+        setQuizs(quiz.data)
+
+    }
+
+    const printQuizs = () => {
+
+        // console.log(quizs);
+        // alert(quizs.map((item,index) => item.question))
+
+        quizs.map((item) => quest.push(item))
+
+    }
+
     return (
         <Layout>
             <Head>
@@ -76,28 +136,61 @@ export default function Test({ token }) {
                             ทดสอบ Solidity
                         </a>
                         <br></br> */}
+                        {printQuizs()}
+
 
                         <div className='flex flex-col w-full p-2'>
                             {showScore ? (
                                 <div className='flex justify-center items-center font-bold text-5xl h-full animate-pulse'>
-                                   You scored {score} out of {questions.length}
+                                    <text>You scored {score} out of {quest.length}</text>
                                 </div>
                             ) : (
                                 <>
                                     <div className='flex flex-col mt-4'>
                                         <div className='font-bold text-3xl'>
-                                            <a>Question : {currentQuestion + 1}</a>/{questions.length}
+                                            <a>Question : {currentQuestion + 1}</a>/{quest.length}
                                         </div> <br></br>
-                                        <div className='font-bold text-xl'>{questions[currentQuestion].questionText}</div>
+                                        {/* <div className='font-bold text-xl'>{questions[currentQuestion].questionText}</div> */}
+                                        <div className='font-bold text-xl'>{quest[currentQuestion].question}</div>
                                     </div>
                                     <div className='grid grid-cols-2 gap-8 gap-y-12 mt-10 '>
-                                        {questions[currentQuestion].answerOptions.map((answerOption,index) => (
-                                            <button key={index} className='h-28 ring-yellow-500 ring-offset-yellow-400 ring-offset-4 ring-8 rounded-lg text-lg bg-redcony hover:bg-sunglow' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
-                                        ))}
+                                        {/* {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                                            <button key={index} className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                                                ring-offset-4 ring-8 rounded-lg text-lg 
+                                                                bg-redcony hover:bg-sunglow' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
+                                                     {answerOption.answerText}
+                                            </button>
+                                        ))} */}
+
+
+                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                                                ring-offset-4 ring-8 rounded-lg text-lg 
+                                                                bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice1)}>
+                                            {quest[currentQuestion].choice1}
+                                        </button>
+
+                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                                                ring-offset-4 ring-8 rounded-lg text-lg 
+                                                                bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice2)}>
+                                            {quest[currentQuestion].choice2}
+                                        </button>
+
+                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                                                ring-offset-4 ring-8 rounded-lg text-lg 
+                                                                bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice3)}>
+                                            {quest[currentQuestion].choice3}
+                                        </button>
+
+                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                                                ring-offset-4 ring-8 rounded-lg text-lg 
+                                                                bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice4)}>
+                                            {quest[currentQuestion].choice4}
+                                        </button>
                                     </div>
                                 </>
                             )}
                         </div>
+
                     </div>
                     <div className='flex justify-end items-end mb-2 mr-2'>
                         <a className='flex justify-center items-center w-36 h-14 bg-sunglow
@@ -105,6 +198,8 @@ export default function Test({ token }) {
                                 hover:bg-redcony focus:outline-none'>Next</a>
                     </div>
                 </div>
+
+
 
             </div>
 

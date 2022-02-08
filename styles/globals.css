@@ -33,6 +33,32 @@ a {
   /* ... */
 }
 
+.pyramid {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+
+
+.pyramid__section {
+  flex: 1 1 100%;
+  background-color: green;
+  margin-bottom: 2px;
+}
+
+.pyramid__section:nth-of-type(even) {
+  background-color: lightgray;
+}
+
+.pyramid__section:hover {
+  background-color: yellow;
+}
+
+
 
 @tailwind base;
 @tailwind components;

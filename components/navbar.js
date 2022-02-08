@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 
 const Navbar = () => (
-    <nav className='grid grid-cols-3 divide-x-2 divide-white items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
+    <nav className='grid grid-cols-3 gap-4  items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
         <Link href='/'>
             <div className='md:flex'>
                 <a className='flex flex-col items-center divide-y-2 divide-white'>
@@ -44,6 +44,13 @@ const Navbar = () => (
                         GAME PLAY
                     </a>
                 </Link>
+
+                <Link href='/tokens_economics'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                    Tokens Economics Research
+                    </a>
+                </Link>
+
                 {/* <Link href='/#'>
                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
                         LOG OUT
