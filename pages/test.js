@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 
 const URL = `http://178.128.90.50:4444/quizs`
+const URL_USERS = `http://178.128.90.50:4444/users`
 
 export default function Test({ token }) {
 

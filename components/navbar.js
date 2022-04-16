@@ -31,7 +31,7 @@ const Navbar = () => (
                 </Link>
                 <Link href='/testsubject'>
                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                        TEST
+                        EXAM
                     </a>
                 </Link>
                 <Link href='/items'>
@@ -47,9 +47,11 @@ const Navbar = () => (
 
                 <Link href='/tokens_economics'>
                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                    Tokens Economics Research
+                        Tokens Economics
                     </a>
                 </Link>
+
+
 
                 {/* <Link href='/#'>
                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
@@ -59,7 +61,15 @@ const Navbar = () => (
             </div>
         </div>
 
+
         <div className='hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'>
+
+            <Link href='/score_board'>
+                <a className='lg:inline-flex lg:w-auto w-full ml-20 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                    ScoreBoard
+                </a>
+            </Link>
+
             <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto'>
                 <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
                     USER
@@ -69,6 +79,7 @@ const Navbar = () => (
 
             </div>
         </div>
+
 
     </nav>
 )
