@@ -130,7 +130,7 @@ export default function Test({ token }) {
                 <title>NFT game tutorials</title>
             </Head>
 
-            <div className='md:flex flex-col fixed -mt-10 justify-center items-center h-screen w-screen'>
+            <div className='md:flex flex-col fixed -mt-12 justify-center items-center h-screen w-screen'>
                 <div className='flex flex-col w-3/5 h-3/4 p-4 resize-y border-4 border-red-400 bg-redcony rounded-3xl shadow-xl'>
                     <div className='flex w-full h-full'>
                         {/* <a>
@@ -154,9 +154,9 @@ export default function Test({ token }) {
                                         {/* <div className='font-bold text-xl'>{questions[currentQuestion].questionText}</div> */}
                                         <div className='font-bold text-xl'>{quest[currentQuestion].question}</div>
                                     </div>
-                                    <div className='grid grid-cols-2 gap-8 gap-y-12 mt-10 '>
+                                    <div className='grid grid-cols-2 gap-12 gap-y-14 mt-10'>
                                         {/* {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-                                            <button key={index} className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                            <button key={index} className='h-24 ring-yellow-500 ring-offset-yellow-400 
                                                                 ring-offset-4 ring-8 rounded-lg text-lg 
                                                                 bg-redcony hover:bg-sunglow' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
                                                      {answerOption.answerText}
@@ -164,25 +164,25 @@ export default function Test({ token }) {
                                         ))} */}
 
 
-                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                        <button className='h-24 ring-yellow-500 ring-offset-yellow-400 
                                                                 ring-offset-4 ring-8 rounded-lg text-lg 
                                                                 bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice1)}>
                                             {quest[currentQuestion].choice1}
                                         </button>
 
-                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                        <button className='h-24 ring-yellow-500 ring-offset-yellow-400 
                                                                 ring-offset-4 ring-8 rounded-lg text-lg 
                                                                 bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice2)}>
                                             {quest[currentQuestion].choice2}
                                         </button>
 
-                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                        <button className='h-24 ring-yellow-500 ring-offset-yellow-400 
                                                                 ring-offset-4 ring-8 rounded-lg text-lg 
                                                                 bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice3)}>
                                             {quest[currentQuestion].choice3}
                                         </button>
 
-                                        <button className='h-28 ring-yellow-500 ring-offset-yellow-400 
+                                        <button className='h-24 ring-yellow-500 ring-offset-yellow-400 
                                                                 ring-offset-4 ring-8 rounded-lg text-lg 
                                                                 bg-redcony hover:bg-sunglow' onClick={() => EventAnswerOptionClick(quest[currentQuestion].choice4)}>
                                             {quest[currentQuestion].choice4}

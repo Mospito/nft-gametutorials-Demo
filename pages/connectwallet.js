@@ -25,9 +25,9 @@ export default function connectwallet() {
       await activate(injected)
 
       alert("Connect Success!!");
-    
-     
-      
+
+
+
 
     } catch (ex) {
       console.log(ex)
@@ -72,15 +72,15 @@ export default function connectwallet() {
 
   function Counter() {
     const { user_id, set_user_id } = user_useStore()
-    
+
     let tmp_id = account
     // set_user_id(tmp_id)
-    
-    
+
+
     return (
       <div className="counter">
         <span>{user_id}</span>
-       
+
       </div>
     )
   }
@@ -89,19 +89,23 @@ export default function connectwallet() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-       
-      <div className="flex flex-col justify-start bg-white rounded shadow-lg p-12 mt-12" >
+
+      <div className="flex flex-col justify-start bg-white rounded-xl shadow-lg p-12 mt-12" >
         <Image src={metamaskPhoto} width="200%" height="200%" className=" " />
 
 
-        <button onClick={connect} className=" text-lg font-bold text-black rounded-lg w-56 bg-blue-600 hover:bg-blue-800 mb-14">Connect to MetaMask</button>
+        <button onClick={connect} className=" text-lg font-bold text-black rounded-lg w-60 h-10 bg-babygreen hover:bg-egg shadow-md">Connect to MetaMask</button>
 
-        <button onClick={PostAccout} className=" text-lg font-bold text-black rounded-lg w-56 bg-blue-600 hover:bg-blue-800 mb-10">Register with MetaMask</button>
+        <button onClick={PostAccout} className="text-lg font-bold text-black rounded-lg w-60 h-10 bg-sunglow hover:bg-sunglow2 shadow-md mt-6">Register with MetaMask</button>
 
-        <button onClick={disconnect} className="bg-blue-600 hover:bg-blue-800 py-2 mb-4 text-lg font-bold text-black rounded-lg w-56 border-blue-500 border-opacity-100">Disconnect</button>
+        <button onClick={disconnect} className="text-lg font-bold text-black rounded-lg w-60 h-10 border-2 border-red-500 hover:bg-red3 shadow-md mt-6">Disconnect</button>
       </div>
-      {active ? <span className="mt-16">Connected with <b>{account}</b></span> : <span className="mt-16">Not connected</span>}
-     
+
+      <div  className="flex items-center justify-center w-1/3 h-16 border-2 border-green-500 bg-white rounded-xl mt-10 shadow-md">
+        {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
+      </div>
+
+
     </div>
 
   )

@@ -11,7 +11,6 @@ export default function Home({ token }) {
   return (
     <Layout>
     <Head>
-      
         <title>NFT game tutorials</title>
     </Head>
          
@@ -23,7 +22,7 @@ export default function Home({ token }) {
         </div>
           <div className = 'flex justify-around md:w-96 text-lg mt-8'>
             <Link href = '/connectwallet'>
-              <button className = 'w-36 h-14 font-semibold border-blue-600 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Connect Wallet</button>
+              <button className = 'w-1/2 h-14 font-semibold border-4 border-gray-700 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Connect Wallet</button>
             </Link>
             {/* <Link href = '/register'>
               <button className = 'w-36 h-14 font-semibold border-blue-600 rounded-lg bg-babyblue hover:bg-whiteblue shadow-lg'>Register</button> 

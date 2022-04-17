@@ -1,8 +1,11 @@
 import { Table, Tag, Space } from 'antd';
+import Head from 'next/head'
+import Layout from '../components/layout'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-
+import conyPhoto from '../photos/cony.png'
+import Image from 'next/image'
 
 export default function score_board() {
   const columns = [
@@ -81,12 +84,24 @@ export default function score_board() {
 
 
   return (
-    <div className=' w-3/4 h-3/4 mt-20 ml-40 bg-white drop-shadow-xl rounded-md'>
-   
+    <Layout>
+    <Head>
+        <title>NFT game tutorials</title>
+    </Head>
+    <div className='md:flex flex-col fixed justify-center items-center h-screen w-screen'>
+      <div className='flex flex-row justify-center w-full -mt-52 items-center'>
+        <div className='flex flex-col justify-center items-center text-4xl w-1/4 h-1/2 mr-4 p-4 font-bold uppercase tracking-wider shadow-xl bg-sunglow rounded-lg pointer-events-none'>
+          <a className='flex justify-center text-2xl font-bold text-black animate-pulse'>Score Board</a>
+        </div>
+        <div className='-ml-16'>
+          <Image src={conyPhoto} width="200%" height="200%" className='' />
+        </div>
+      </div>
+      <div className='w-3/4 bg-white drop-shadow-xl rounded-xl p-4'>
         <Table columns={columns} dataSource={data} />
-  
-
+      </div>
     </div>
-
+    </Layout>
   )
 }
+

@@ -43,86 +43,62 @@ export default function Lesson({ token }) {
                             <div className='flex text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 1</div>
                         </a>
                     </Link>
-                    
+
                     <Link href='/Learns/learn2'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900 '>บทที่ 2</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 2</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn3'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 3</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 3</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn4'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 4</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 4</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn5'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900 '>บทที่ 5</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900 '>บทที่ 5</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn6'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 6</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 6</div>
+                        </a>
                     </Link>
 
 
                     <Link href='/Learns/learn7'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 7</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 7</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn8'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 8</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900'>บทที่ 8</div>
+                        </a>
                     </Link>
 
                     <Link href='/Learns/learn9'>
-                    <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4  border-blue-900 shadow-xl rounded-xl 
+                        <a className='flex flex-row justify-center items-center w-56 h-16 bg-white border-4 border-blue-900 shadow-xl rounded-xl 
                             transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105'>
-                        <div className='flex -ml-3'>
-                            <Image src={lockPhoto} width="30%" height="30%" className='' />
-                        </div>
-                        <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900 '>บทที่ 9</div>
-                    </a>
+                            <div className='flex ml-3 text-xl font-bold text-center tracking-wider text-blue-900 '>บทที่ 9</div>
+                        </a>
                     </Link>
                 </div>
 
