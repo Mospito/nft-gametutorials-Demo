@@ -43,21 +43,34 @@ export default function AllExam() {
 
     const render = () => {
 
-       return (data.map((item,index) => (
+        return (data.map((item, index) => (
+            <div class="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+               
+                    <text>{index + 1}</text>
+                    <text>{item.question}</text>
+                    <text>{item.choice1}</text>
+                    <text> {item.choice2}</text>
+                    <text> {item.choice3} </text>
+                    <text>{item.choice4} </text>
+                    <text>{item.ans}</text>
+                       
 
-        <li key={index}>
-            {item.question}
-        </li>
-       )))
+                    <button>Edit</button>
+                    <button>Delete</button>
+                    
+                
+            </div>
+
+        )))
     }
 
 
     return (
 
 
-        <div className='flex flex-col items-center drop-shadow-2xl pt-5' >
+        <div className='flex flex-start items-start drop-shadow-2xl pt-5' >
 
-        
+
             {render()}
         </div>
 
