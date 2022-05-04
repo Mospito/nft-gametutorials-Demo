@@ -102,7 +102,7 @@ export default function connectwallet() {
       </div>
 
       <div  className="flex items-center justify-center w-1/3 h-16 border-2 border-green-500 bg-white rounded-xl mt-10 shadow-md">
-        {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
+        {active ? <span className="pl-4">Connected with <b>{account}</b></span> : <span>Not connected</span>}
       </div>
 
 

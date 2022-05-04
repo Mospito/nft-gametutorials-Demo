@@ -41,6 +41,21 @@ export default function AllExam() {
         console.log(data);
     }
 
+    const on_delete = async (id) => {
+
+        await axios.delete(`${URL}/${id}`)
+            .then(response => alert("ลบข้อมูลเสร็จสิ้น"))
+            .catch(err => alert("ลบข้อมูลไม่สำเร็จ: " + err))
+
+    }
+
+    const on_edit = async (id) => {
+
+        await axios.put(`${URL}/${id}`,{question,choice1,choice2,choice3,choice4,ans})
+            .then(response => alert("แก้ไขข้อมูลเสร็จสิ้น"))
+            .catch(err => alert("แก้ไขข้อมูลไม่สำเร็จ: " + err))
+    }
+
 
 
     const render = () => {
@@ -50,38 +65,69 @@ export default function AllExam() {
                 <div className='flex flex-col w-full h-4/5 text-justify overflow-y-auto'>
                     <div className='flex flex-row font-semibold text-justify w-11/12'>
                         <text>{index + 1}.</text>
-                        <text className='pl-1'>{item.question}</text>
+                        {/* <text className='pl-1'>{item.question}</text> */}
+
+                        {/* use react form hook */}
+                        <input type="text" defaultValue={item.question} className='pl-1' onChange={(e) => {
+
+                                setQuestion(e.target.value);
+                                 console.log(e.target.value);
+                        }}
+                        />
                     </div>
                     <div className='flex flex-col text-justify w-11/12 mt-2'>
                         <div>
                             <text className='font-semibold'>A.</text>
-                            <text className='pl-1'>{item.choice1}</text>
+                            {/* <text className='pl-1'>{item.choice1}</text> */}
+                            <input type="text" defaultValue={item.choice1} className='pl-1' onChange={(e) => setChoice1(e.target.value)} />
                         </div>
                         <div>
                             <text className='font-semibold'>B.</text>
-                            <text className='pl-1'>{item.choice2}</text>
+                            {/* <text className='pl-1'>{item.choice2}</text> */}
+                            <input type="text" defaultValue={item.choice2} className='pl-1' onChange={(e) => setChoice2(e.target.value)} />
                         </div>
                         <div>
                             <text className='font-semibold'>C.</text>
-                            <text className='pl-1'>{item.choice3}</text>
+                            {/* <text className='pl-1'>{item.choice3}</text> */}
+                            <input type="text" defaultValue={item.choice3} className='pl-1' onChange={(e) => setChoice3(e.target.value)} />
                         </div>
                         <div>
                             <text className='font-semibold'>D.</text>
-                            <text className='pl-1'>{item.choice4}</text>
+                            {/* <text className='pl-1'>{item.choice4}</text> */}
+                            <input type="text" defaultValue={item.choice4} className='pl-1' onChange={(e) => setChoice4(e.target.value)} />
                         </div>
                     </div>
 
 
                     <div className='flex flex-row mt-2 text-justify font-semibold w-11/12'>
-                        <text className='text-red-700'>Answer:</text>
-                        <text className='pl-1'>{item.ans}</text>
+                        <text className='text-red-700 pr-2'>Answer:</text>
+                        {/* <text className='pl-1'>{item.ans}</text> */}
+                        <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-gray-600 block w-2/4 pl-2 w-10 h-8" id="grid-state"
+                            onChange={(e) => setAns(e.target.value)}
+                        >
+                            <option>{item.choice1}</option>
+                            <option>{item.choice2}</option>
+                            <option>{item.choice3}</option>
+                            <option>{item.choice4}</option>
+
+                        </select>
                     </div>
                 </div>
 
 
                 <div className='flex flex-row justify-center items-center gap-8 w-full pt-6 h-1/5'>
-                    <button className='flex justify-center items-center border-2 border-green-600 h-9 w-20 rounded-lg bg-babygreen hover:bg-whiteblue font-semibold shadow-lg'>Edit</button>
-                    <button className='flex justify-center items-center border-2 border-red-500 h-9 w-20 rounded-lg bg-red2 hover:bg-red3 font-semibold shadow-lg'>Delete</button>
+                    <button className='flex justify-center items-center border-2 border-green-600 h-9 w-20 rounded-lg bg-babygreen hover:bg-whiteblue font-semibold shadow-lg'
+                        onClick={() => on_edit(item.id)}
+                    >
+                        Edit
+                    </button>
+
+                    <button className='flex justify-center items-center border-2 border-red-500 h-9 w-20 rounded-lg bg-red2 hover:bg-red3 font-semibold shadow-lg'
+                        onClick={() => on_delete(item.id)}
+                    >
+                        Delete
+
+                    </button>
                 </div>
 
             </div>

@@ -1,5 +1,10 @@
+import { Select } from 'antd'
 import Link from 'next/link'
 
+const { Option } = Select;
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
 
 const Navbar = () => (
     <nav className='grid grid-cols-3 gap-4 items-center bg-gradient-to-r from-green-500 to-blue-400 p-4 shadow-xl'>
@@ -50,9 +55,9 @@ const Navbar = () => (
                     </a>
                 </Link>
 
-                <Link href='/score_board'>
+                <Link href='https://dune.com/embeds/655538/1217964/5fff586c-ce60-4224-b659-41ab4818dcff'>
                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-2 text-center rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                        Score Board
+                        FindNFT
                     </a>
                 </Link>
 
@@ -67,10 +72,12 @@ const Navbar = () => (
 
 
         <div className='hidden w-full lg:inline-flex lg:flex-grow lg:w-auto'>
-            <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto'>
-                <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
-                    User
-                </a>
+            <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto cursor-pointer'>
+                <Link href='/Admin/login_admin'>
+                    <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 mr-8 rounded text-white font-bold items-center justify-center hover:bg-blue hover:text-white'>
+                        Admin
+                    </a>
+                </Link>
             </div>
         </div>
 

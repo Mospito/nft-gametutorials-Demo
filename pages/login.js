@@ -82,7 +82,7 @@ export default function Login({ token }) {
                 </div>
                 {/* <button onClick={copyText}> Copy token </button> */}
 
-             
+
             </div>
         </Layout>
     )

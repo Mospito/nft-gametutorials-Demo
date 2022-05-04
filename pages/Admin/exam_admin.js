@@ -49,11 +49,11 @@ export default function ExamAdmin() {
             choice4: choice4,
             ans: ans,
         })
-            .then(function (response) {
+        .then(function (response) {
                 console.log(response);
                 alert("Successfully")
             })
-            .catch(function (error) {
+        .catch(function (error) {
                 console.log(error);
                 alert("Error")
             });
@@ -84,7 +84,7 @@ export default function ExamAdmin() {
             </div>
             <div className='flex justify-center items-center h-2/3 w-2/4 bg-blue2 rounded-2xl mt-4 shadow-lg'>
                 <div className="flex flex-col justify-center w-full p-4">
-                    <form action='/Admin/exam_admin' method="post">
+                    <form >
                         <div className="flex flex-col justify-center w-full">
                             <label for="Question" className={style_label}>Question</label>
                             <input
@@ -158,6 +158,8 @@ export default function ExamAdmin() {
 
                         </select>
 
+
+                         {/* use Signgle page */}
                         <div className='flex justify-center items-center mt-8 text-base'>
                             <button type="submit" className="font-bold uppercase w-1/5 h-10 border-4 border-green-800 bg-babygreen rounded-xl hover:bg-bluesea" onClick={submit_data}>Submit</button>
                         </div>
