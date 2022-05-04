@@ -10,7 +10,7 @@ import { user_useStore } from "./../store/user/user_store"
 
 const URL = `http://178.128.90.50:4444/users`
 
-export default function connectwallet() {
+export default function login_admin() {
 
 
 

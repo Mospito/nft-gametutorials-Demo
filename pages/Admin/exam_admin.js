@@ -86,7 +86,7 @@ export default function ExamAdmin() {
                 <div className="flex flex-col justify-center w-full p-4">
                     <form >
                         <div className="flex flex-col justify-center w-full">
-                            <label for="Question" className={style_label}>Question</label>
+                            <label  className={style_label}>Question</label>
                             <input
                                 type="text"
                                 id="Question"
@@ -98,7 +98,7 @@ export default function ExamAdmin() {
                         </div>
                         <div className="flex flex-row justify-between w-full mt-4">
                             <div className="flex flex-col w-5/12">
-                                <label for="Choice1" className={style_label} >Choice 1</label>
+                                <label  className={style_label} >Choice 1</label>
                                 <input
                                     type="text"
                                     id="Choice1"
@@ -109,7 +109,7 @@ export default function ExamAdmin() {
                                 />
                             </div>
                             <div className="flex flex-col w-5/12">
-                                <label for="Choice2" className={style_label}>Choice 2 </label>
+                                <label  className={style_label}>Choice 2 </label>
                                 <input
                                     type="text"
                                     id="Choice2"
@@ -122,7 +122,7 @@ export default function ExamAdmin() {
                         </div>
                         <div className="flex flex-row justify-between w-full mt-4">
                             <div className="flex flex-col w-5/12">
-                                <label for="Choice3" className={style_label}>Choice 3 </label>
+                                <label  className={style_label}>Choice 3 </label>
                                 <input
                                     type="text"
                                     id="Choice3"
@@ -133,7 +133,7 @@ export default function ExamAdmin() {
                                 />
                             </div>
                             <div className="flex flex-col w-5/12">
-                                <label for="Choice4" className={style_label}>Choice 4 </label>
+                                <label  className={style_label}>Choice 4 </label>
                                 <input
                                     type="text"
                                     id="Choice4"

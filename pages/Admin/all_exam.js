@@ -61,10 +61,10 @@ export default function AllExam() {
     const render = () => {
 
         return (data.map((item, index) => (
-            <div className="flex flex-col justify-start items-start w-1/3 h-3/4 p-4 bg-white rounded-lg text-left border-2 border-red-800 shadow-md">
-                <div className='flex flex-col w-full h-4/5 text-justify overflow-y-auto'>
+            <div  key={index} className="flex flex-col justify-start items-start w-1/3 h-3/4 p-4 bg-white rounded-lg text-left border-2 border-red-800 shadow-md">
+                <div  className='flex flex-col w-full h-4/5 text-justify overflow-y-auto'>
                     <div className='flex flex-row font-semibold text-justify w-11/12'>
-                        <text>{index + 1}.</text>
+                        <text key={index}>{index + 1}.</text>
                         {/* <text className='pl-1'>{item.question}</text> */}
 
                         {/* use react form hook */}
