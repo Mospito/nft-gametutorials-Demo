@@ -3,14 +3,14 @@ import { useWeb3React } from "@web3-react/core"
 import { injected } from "../../components/wallet/connectors"
 import Image from 'next/image'
 import metamaskPhoto from '../../photos/metamask.png'
-import { Router, useRouter } from 'next/router'
+import {  useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-import { user_useStore } from "./../store/user/user_store"
+
 
 const URL = `http://178.128.90.50:4444/users`
 
-export default function login_admin() {
+export default function Login_admin() {
 
 
 
@@ -18,7 +18,9 @@ export default function login_admin() {
     const { active, account, library, connector, activate, deactivate } = useWeb3React()
     const router = useRouter()
 
-    const isCheckAdmin =  () =>{
+    const IsCheckAdmin = async () =>{
+
+        await Connect()
 
         if(account === '0xF43EE49Fccb7Af7fB7781A71A87D850B35bb264b')
         {
@@ -29,23 +31,19 @@ export default function login_admin() {
         //    console.log(account);
            
             // router.push('/')
+            // router.push('/Admin/view_admin')
            
         }
 
     }
-    async function connect() {
+    async function Connect() {
 
         try {
             await activate(injected)
 
             alert("Connect Success!!");
             
-            isCheckAdmin()
-
-     
-
-
-
+            // isCheckAdmin()
         } catch (ex) {
             console.log(ex)
         }
@@ -65,8 +63,6 @@ export default function login_admin() {
     const PostAccout = async () => {
 
         try {
-
-
             await axios.post(URL,
                 {
                     wallet_id: account,
@@ -86,24 +82,6 @@ export default function login_admin() {
 
     }
 
-
-    function Counter() {
-        const { user_id, set_user_id } = user_useStore()
-
-        let tmp_id = account
-        // set_user_id(tmp_id)
-
-
-        return (
-            <div className="counter">
-                <span>{user_id}</span>
-
-            </div>
-        )
-    }
-
-
-
     return (
         <div className="flex flex-col items-center justify-center">
 
@@ -115,7 +93,7 @@ export default function login_admin() {
                 <Image src={metamaskPhoto} width="200%" height="200%" className=" " />
 
 
-                <button onClick={connect} className=" text-lg font-bold text-black rounded-lg w-60 h-10 bg-babygreen hover:bg-egg shadow-md">Connect to MetaMask</button>
+                <button onClick={IsCheckAdmin} className=" text-lg font-bold text-black rounded-lg w-60 h-10 bg-babygreen hover:bg-egg shadow-md">Connect to MetaMask</button>
 
                 <button onClick={disconnect} className="text-lg font-bold text-black rounded-lg w-60 h-10 border-2 border-red-500 hover:bg-red3 shadow-md mt-6">Disconnect</button>
             </div>

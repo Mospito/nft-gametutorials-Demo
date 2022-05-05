@@ -6,7 +6,7 @@ import metamaskPhoto from '../photos/metamask.png'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 import axios from "axios"
-import { user_useStore } from "./store/user/user_store"
+
 
 const URL = `http://178.128.90.50:4444/users`
 
@@ -70,20 +70,7 @@ export default function connectwallet() {
   }
 
 
-  function Counter() {
-    const { user_id, set_user_id } = user_useStore()
 
-    let tmp_id = account
-    // set_user_id(tmp_id)
-
-
-    return (
-      <div className="counter">
-        <span>{user_id}</span>
-
-      </div>
-    )
-  }
 
 
 
